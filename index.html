@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Final - Map</title>
+<link href="_css/site.css" rel="stylesheet">
+<style>
+#map {
+  width: 760px;
+  height: 400px;
+}
+
+</style>
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="js/jquery.gomap-1.3.2.min.js"></script>
+<script>
+$(document).ready(function() {
+    
+    $('#map').goMap({
+        latitude: 41.877744,
+        longitude: -87.627275,
+        zoom: 15
+    }); // end goMap
+    
+    $.goMap.createMarker({
+       latitude : 41.877744,
+       longitude : -87.627275,
+       title : 'DePaul',
+        html : {
+          content : '<h3>DePaul University</h3>',
+          popup : true
+      }
+}); // end createMarker
+    
+   
+
+}); // end ready
+</script>
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="header">
+    <p class="logo">IT 411 - Final Exam - Jennifer Kania <i class="mm">Map</i></p>
+  </div>
+
+
+  <div class="content">
+    <div class="main">
+      <h1>Map</h1>
+        <div id="map"></div>
+        </div>
+  </div>
+  <div class="footer">
+    <p>Created by Jennifer Kania</p>
+  </div>
+</div>
+
+</body>
+</html>
